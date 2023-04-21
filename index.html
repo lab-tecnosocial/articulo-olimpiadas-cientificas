@@ -109,6 +109,14 @@
             color: #FFFDFA;
             background-color: #373636;
         }
+        
+        #texto {
+            padding: 2rem;
+            text-align: left;
+            font-size: 16px;
+            color: #FFFDFA;
+            background-color: #373636;
+        }
 
         #Autor {
             text-align: right;
@@ -241,6 +249,9 @@
             #outro {
                 margin: 0 20rem;
             }
+            #texto {
+                margin: 0 20rem;
+            }
         }
 
         /* Indicador */
@@ -322,7 +333,7 @@
 
                 <div class="step">
                     <p>¿Pero cuántas historias como la de Esmeralda y Erika han existido en las Olimpiadas Científicas?
-                        ¿Cuántos niños y niñas del área rural o de colegios fiscales, tuvieron la oportunidad de
+                        ¿Cuántos niños y niñas del área rural o de colegios fiscales tuvieron la oportunidad de
                         triunfar en esta competencia de Ciencias y Tecnología?
                     </p>
                 </div>
@@ -379,7 +390,7 @@
             </article>
         </section>
 
-        <section id="outro">
+        <section id="texto">
             <div>
                 <h1>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</h1>
                 <p style="text-align: right">Por: <b>Valeria Peredo</b></p>
@@ -499,7 +510,7 @@
                 </div>
         </section>
 
-        <section id="outro">
+        <section id="texto">
             <div>
                 <h1>El reto de aprender (y enseñar) ciencias exactas</h1>
                 <br>
@@ -593,26 +604,23 @@
                 <br>
                 <h1>Metodología</h1>
                 <br>
-                <p>Se recolectó la información de las revistas anuales de las Olimpiadas Científicas Plurinacionales,
-                    que se recuperaron de la página caída de la biblioteca del Ministerio de Educación y los medalleros
-                    anuales que se publican desde 2019 en la página oficial de las Olimpiadas. Las revistas pueden
-                    revisarse aquí. Los datos iniciales incluían el nombre del olimpista, la olimpiada en la que
-                    participó, la categoría, el curso o nivel, el distrito educativo, el departamento y el colegio que
+                <p>Recolectamos los datos de las revistas anuales de las Olimpiadas Científicas Plurinacionales y de los medalleros nacionales que se publican en el <a href="https://olimpiada.minedu.gob.bo/">sitio oficial de las Olimpiadas Científicas</a>.
+                    La base de datos inicial incluía el nombre del olimpista o su código RUDE (Registro únio de estudiante), la olimpiada en la que
+                    participó, la categoría, su curso o nivel, distrito educativo, el departamento y el colegio que
                     representaba.</p>
                 <br>
-                <p>Estos datos fueron cruzados con los datos sobre Unidades Educativas del Ministerio de Educación, que
+                <p>Cruzamos el dataset inicial con datos sobre Unidades Educativas del Ministerio de Educación, que
                     cuenta con información de aproximadamente 10 mil escuelas en todo el país. Mediante un join en R de
                     las dos tablas, se obtuvo una nueva que nos brindaba datos sobre área geográfica del colegio del
-                    estudiante y su dependencia, es decir, si era privado o fiscal. Finalmente se pulieron los datos
+                    estudiante y la dependencia del colegio. Finalmente se pulieron los datos
                     mediante una limpieza manual.</p>
                 <br>
-                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos los datos de las Olimpiadas de 2018,
-                    pues el medallero que encontramos no proporcionaba información de variables sociales que podríamos
-                    analizar: sólamente se compartió el nombre del Olimpista, la medalla que ganó y la categoría en la
-                    que participó, por tanto, no había mucha información ni variables sociales que pudiéramos analizar
-                    en las Olimpiadas de 2018.</p>
+                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos la información de las Olimpiadas de 2018,
+                    pues el medallero de dicho año solamente nos mostraba el nombre del olimpista, la categoría en que ganó y su departamento, lo cual no nos permitía hacer cruces con otras variables sociales.</p>
                 <br>
                 <h1>Datos</h1>
+                <br>
+                <p>La base de datos, y las revistas y medalleros que utilizamos para construirla pueden descargase en los siguientes links:</p>
                 <br>
                 <p><a
                         href="https://github.com/lab-tecnosocial/articulo-olimpiadas-cientificas/tree/master/datos">Github</a>

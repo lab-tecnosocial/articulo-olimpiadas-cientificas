@@ -6,7 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Primary Meta Tags -->
+    <title>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</title>
+    <meta name="title" content="Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas">
+    <meta name="description"
+        content="Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Analizamos los datos de sus resultados.">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas">
+    <meta property="og:description"
+        content="Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Analizamos los datos de sus resultados.">
+    <meta property="og:image" content="https://labtecnosocial.org/articulo-olimpiadas-cientificas/img/thumbnail.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title"
+        content="Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas">
+    <meta property="twitter:description"
+        content="Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Analizamos los datos de sus resultados.">
+    <meta property="twitter:image"
+        content="https://labtecnosocial.org/articulo-olimpiadas-cientificas/img/thumbnail.png">
     <style>
         /* General */
 
@@ -58,13 +80,14 @@
             text-align: center;
         }
 
-        iframe{
+        iframe {
             border: none;
         }
 
         a {
-  color: #ff4e50;
-}
+            color: #ff4e50;
+        }
+
         /* Intro y Outro */
 
 
@@ -154,8 +177,8 @@
             color: black;
         }
 
-         /* Lista */
-         .row {
+        /* Lista */
+        .row {
             display: flex;
         }
 
@@ -210,7 +233,57 @@
             }
 
             .step {
-                margin: 40rem auto;
+                margin: 30rem auto;
+            }
+        }
+
+        /* Indicador */
+
+        .indicator {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeOut 6s forwards;
+        }
+
+        .arrow-icon {
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            margin-left: 10px;
+            animation: arrowAnim 1s infinite;
+        }
+
+        @keyframes arrowAnim {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
             }
         }
     </style>
@@ -224,16 +297,26 @@
                 <video autoplay muted loop id="intro-video">
                     <source src="video/erika-esmeralda2.mp4" type="video/mp4">
                 </video>
+                <div class="indicator">
+                    <p>Desliza hacia abajo</p>
+                    <span class="arrow-icon material-symbols-outlined">
+                        keyboard_double_arrow_down
+                        </span>
+                </div>
             </figure>
 
             <article class="article__center">
                 <div class="step">
-                    <p>Ellas son Erika Mamani y Esmeralda Quispe, dos niñas de la provincia de Ancoraimes que se volvieron mundialmente famosas tras ganar las Olimpiadas Científicas Plurinacionales de robótica el 2014, con un brazo hidráulico que construyeron a partir de materiales reciclables.
+                    <p>Ellas son Erika Mamani y Esmeralda Quispe, dos niñas de la provincia de Ancoraimes que se
+                        volvieron mundialmente famosas tras ganar las Olimpiadas Científicas Plurinacionales de robótica
+                        el 2014, con un brazo hidráulico que construyeron a partir de materiales reciclables.
                     </p>
                 </div>
 
                 <div class="step">
-                    <p>¿Pero cuántas historias como la de Esmeralda y Erika han existido en las Olimpiadas Científicas? ¿Cuántos niños y niñas del área rural o de colegios fiscales, tuvieron la oportunidad de triunfar en esta competencia de Ciencias y Tecnología?
+                    <p>¿Pero cuántas historias como la de Esmeralda y Erika han existido en las Olimpiadas Científicas?
+                        ¿Cuántos niños y niñas del área rural o de colegios fiscales, tuvieron la oportunidad de
+                        triunfar en esta competencia de Ciencias y Tecnología?
                     </p>
                 </div>
             </article>
@@ -241,12 +324,15 @@
 
         <section class="scrolly" data-flourishid="1867763">
             <figure class="figure__full">
-                <iframe class="image__full" scrolling="no" src="https://flo.uri.sh/story/1867763/embed#slide-0"></iframe>
+                <iframe class="image__full" scrolling="no"
+                    src="https://flo.uri.sh/story/1867763/embed#slide-0"></iframe>
             </figure>
 
             <article class="article__center">
                 <div class="step" data-step="0">
-                    <p>Recolectamos la información de los medalleros nacionales de las Olimpiadas Científicas Plurinacionales de 2012 a 2021. Cada círculo en este gráfico representa un olimpista premiado en la fase nacional de la competencia.
+                    <p>Recolectamos la información de los medalleros nacionales de las Olimpiadas Científicas
+                        Plurinacionales de 2012 a 2021. Cada círculo en este gráfico representa un olimpista premiado en
+                        la fase nacional de la competencia.
                     </p>
                 </div>
 
@@ -256,12 +342,14 @@
                 </div>
 
                 <div class="step" data-step="2">
-                    <p>Además, los estudiantes de colegios privados se llevaron alrededor del 60% de medallas a lo largo de estos años, mientras que los de colegios fiscales el 30%.
+                    <p>Además, los estudiantes de colegios privados se llevaron alrededor del 60% de medallas a lo largo
+                        de estos años, mientras que los de colegios fiscales el 30%.
                     </p>
                 </div>
 
                 <div class="step" data-step="3">
-                    <p>Estas diferencias entre colegios fiscales y particulares se presentan en cada categoría de la competencia (a excepción de biología, la feria científica y geografía).
+                    <p>Estas diferencias entre colegios fiscales y particulares se presentan en cada categoría de la
+                        competencia (a excepción de biología, la feria científica y geografía).
                     </p>
                 </div>
 
@@ -271,53 +359,79 @@
                 </div>
 
                 <div class="step" data-step="5">
-                    <p>En promedio, sólamente el 11% de los y las bolivianas estudiaron en colegios privados entre el 2011 y 2021.
+                    <p>En promedio, sólamente el 11% de los y las bolivianas estudiaron en colegios privados entre el
+                        2011 y 2021.
                     </p>
                 </div>
 
                 <div class="step" data-step="5">
-                    <p>Ese pequeño porcentaje del alumnado boliviano se ha llevado el 60% de los premios en las Olimpiadas Científicas Plurinacionales. ¿Qué explica estas desigualdades?
+                    <p>Ese pequeño porcentaje del alumnado boliviano se ha llevado el 60% de los premios en las
+                        Olimpiadas Científicas Plurinacionales. ¿Qué explica estas desigualdades?
                     </p>
                 </div>
             </article>
         </section>
 
-        <section id ="outro">
+        <section id="outro">
             <div>
                 <h1>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</h1>
+                <p style="text-align: right">Por: <b>Valeria Peredo</b></p>
                 <br>
-                <p>Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Fueron creadas el 2011 por el gobierno del ex-presidente Evo Morales, en alianza con los departamentos de ciencias y tecnología de distintas universidades bolivianas.</p>
                 <br>
-                <p>Con el objetivo fomentar el desarrollo de conocimientos en ciencias y tecnología, e identificar jóvenes talentos científicos en Bolivia, la competencia se organiza en cuatro etapas que se realizan a lo largo de un año escolar.</p>
+                <p>Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre
+                    ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Fueron
+                    creadas el 2011 por el gobierno del ex-presidente Evo Morales, en alianza con los departamentos de
+                    ciencias y tecnología de distintas universidades bolivianas.</p>
                 <br>
-                <div class="flourish-embed" data-src="visualisation/13324432"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                <p>Con el objetivo fomentar el desarrollo de conocimientos en ciencias y tecnología, e identificar
+                    jóvenes talentos científicos en Bolivia, la competencia se organiza en cuatro etapas que se realizan
+                    a lo largo de un año escolar.</p>
                 <br>
-                <p>Durante la primera etapa, sucede la inscripción. El profesor elige a sus estudiantes destacados en clase y los invita a inscribirse a las Olimpiadas Científicas. Pueden competir en el área de Astronomía y astrofísica, Biología, Feria científica, Física, Geografía, Informática, Matemáticas, Química o Robótica.</p>
+                <div class="flourish-embed" data-src="visualisation/13324432">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
                 <br>
-                <p>Tras la inscripción, los estudiantes deben superar tres fases de evaluación de conocimientos a nivel distrital, departamental y, finalmente, nacional. Los temas evaluados en las distintas fases son planificadas por un comité académico de alto nivel, compuesto por docentes de varias universidades bolivianas.</p>
+                <p>Durante la primera etapa, sucede la inscripción. El profesor elige a sus estudiantes destacados en
+                    clase y los invita a inscribirse a las Olimpiadas Científicas. Pueden competir en el área de
+                    Astronomía y astrofísica, Biología, Feria científica, Física, Geografía, Informática, Matemáticas,
+                    Química o Robótica.</p>
                 <br>
-                <p>Desde la fase distrital, a medida que avanza la competencia, las pruebas se vuelven más y más complejas. Es aquí donde miles de estudiantes de colegios fiscales y del área rural son descalificados, porque la preparación que recibieron para las olimpiadas es insuficiente.</p>
+                <p>Tras la inscripción, los estudiantes deben superar tres fases de evaluación de conocimientos a nivel
+                    distrital, departamental y, finalmente, nacional. Los temas evaluados en las distintas fases son
+                    planificadas por un comité académico de alto nivel, compuesto por docentes de varias universidades
+                    bolivianas.</p>
+                <br>
+                <p>Desde la fase distrital, a medida que avanza la competencia, las pruebas se vuelven más y más
+                    complejas. Es aquí donde miles de estudiantes de colegios fiscales y del área rural son
+                    descalificados, porque la preparación que recibieron para las olimpiadas es insuficiente.</p>
             </div>
         </section>
 
         <section class="scrolly" data-flourishid="1891701">
             <figure class="figure__full">
-                <iframe class="image__full" scrolling="no" src="https://flo.uri.sh/story/1891701/embed#slide-0"></iframe>
+                <iframe class="image__full" scrolling="no"
+                    src="https://flo.uri.sh/story/1891701/embed#slide-0"></iframe>
             </figure>
 
             <article class="article__center">
                 <div class="step" data-step="0">
-                    <p>El 2020, UNESCO publicó los resultados del <a href="http://fdteulp.org/wp-content/uploads/2021/12/diagnostico-aprendizajes-1.pdf">diagnóstico la calidad de educación en Bolivia</a>, para el cual se realizaron pruebas a cientos de estudiantes, de tercero y sexto de secundaria, evaluando su desempeño en el área de lectura, matemática y ciencias.
+                    <p>El 2020, UNESCO publicó los resultados del <a
+                            href="http://fdteulp.org/wp-content/uploads/2021/12/diagnostico-aprendizajes-1.pdf">diagnóstico
+                            la calidad de educación en Bolivia</a>, para el cual se realizaron pruebas a cientos de
+                        estudiantes, de tercero y sexto de secundaria, evaluando su desempeño en el área de lectura,
+                        matemática y ciencias.
                     </p>
                 </div>
 
                 <div class="step" data-step="0">
-                    <p>La prueba organizaba el rendimiento de los estudiantes en cuatro niveles, siendo el Nivel I el rendimiento más bajo y el nivel IV el más alto.
+                    <p>La prueba organizaba el rendimiento de los estudiantes en cuatro niveles, siendo el Nivel I el
+                        rendimiento más bajo y el nivel IV el más alto.
                     </p>
                 </div>
 
                 <div class="step" data-step="1">
-                    <p>Los jóvenes de colegios privados rinden mejor en todas las pruebas, tanto en tercero de secundaria…
+                    <p>Los jóvenes de colegios privados rinden mejor en todas las pruebas, tanto en tercero de
+                        secundaria…
                     </p>
                 </div>
 
@@ -327,12 +441,16 @@
                 </div>
 
                 <div class="step" data-step="3">
-                    <p>Esta es la distribución de medallas por colegio en las Olimpiadas. Los colegios privados están en verde oscuro y los públicos en verde claro. A la derecha se observa una barra que se levanta muy por encima de las otras: es el San Agustín de Cochabamba, un colegio especializado en la enseñanza de ciencias exactas.
+                    <p>Esta es la distribución de medallas por colegio en las Olimpiadas. Los colegios privados están en
+                        verde oscuro y los públicos en verde claro. A la derecha se observa una barra que se levanta muy
+                        por encima de las otras: es el San Agustín de Cochabamba, un colegio especializado en la
+                        enseñanza de ciencias exactas.
                     </p>
                 </div>
 
                 <div class="step" data-step="4">
-                    <p>Esta es la cabeza del gráfico anterior. Estos son los 20 colegios con más medallas acumuladas a lo largo de estos años.
+                    <p>Esta es la cabeza del gráfico anterior. Estos son los 20 colegios con más medallas acumuladas a
+                        lo largo de estos años.
                     </p>
                 </div>
 
@@ -341,49 +459,101 @@
                 </div>
 
                 <div class="step" data-step="6">
-                    <p>Una clave para entender por qué tan pocos colegios se llevan la mayor cantidad de premios en las Olimpiadas Plurinacionales, está en la inversión que se realiza por estudiante, que no es la misma en colegios públicos que en  privados.
+                    <p>Una clave para entender por qué tan pocos colegios se llevan la mayor cantidad de premios en las
+                        Olimpiadas Plurinacionales, está en la inversión que se realiza por estudiante, que no es la
+                        misma en colegios públicos que en privados.
                 </div>
 
                 <div class="step" data-step="7">
-                    <p>Por ejemplo, la pensión del colegio San Agustín para un estudiante de secundaria es de 990bs mensuales. Eso quiere decir que la inversión anual por cada estudiante es de, aproximadamente, 9900 bs.
+                    <p>Por ejemplo, la pensión del colegio San Agustín para un estudiante de secundaria es de 990bs
+                        mensuales. Eso quiere decir que la inversión anual por cada estudiante es de, aproximadamente,
+                        9900 bs.
                 </div>
 
                 <div class="step" data-step="8">
-                    <p>En cambio, si dividimos las <a href="https://seie.minedu.gob.bo/reportes/estadisticas/grupo2/gasto">inversiones realizadas en el subsistema de educación regular el 2021</a>, entre la cantidad de estudiantes que estuvieron en colegios fiscales, tenemos que la inversión anual que realiza el Estado por estudiante es de 6364 bolivianos.
+                    <p>En cambio, si dividimos las <a
+                            href="https://seie.minedu.gob.bo/reportes/estadisticas/grupo2/gasto">inversiones realizadas
+                            en el subsistema de educación regular el 2021</a>, entre la cantidad de estudiantes que
+                        estuvieron en colegios fiscales, tenemos que la inversión anual que realiza el Estado por
+                        estudiante es de 6364 bolivianos.
                 </div>
 
                 <div class="step" data-step="9">
-                    <p>La brecha de inversión, junto con la ineficiente distribución de recursos públicos que caracteriza al Estado boliviano, le da una ventaja a los estudiantes de colegios privados. Colegios como el San Agustín, al disponer de más recursos, pueden contratar profesores con mejor preparación académica y pagarles sus correspondientes horas extra para preparar a sus olimpistas.
+                    <p>La brecha de inversión, junto con la ineficiente distribución de recursos públicos que
+                        caracteriza al Estado boliviano, le da una ventaja a los estudiantes de colegios privados.
+                        Colegios como el San Agustín, al disponer de más recursos, pueden contratar profesores con mejor
+                        preparación académica y pagarles sus correspondientes horas extra para preparar a sus
+                        olimpistas.
                 </div>
 
                 <div class="step" data-step="10">
-                    <p>En cambio, es bastante común ver a padres de familia y profesores del sistema de educación fiscal protestando por la falta de recursos y condiciones mínimas para pasar clases.
+                    <p>En cambio, es bastante común ver a padres de familia y profesores del sistema de educación fiscal
+                        protestando por la falta de recursos y condiciones mínimas para pasar clases.
                 </div>
         </section>
 
-        <section id ="outro">
+        <section id="outro">
             <div>
                 <h1>El reto de aprender (y enseñar) ciencias exactas</h1>
                 <br>
-                <p>Entrevistamos a Gonzalo Salinas, docente universitario, profesor de colegio y tutor de matemáticas de varios olimpistas premiados. Como cuentan sus ex-estudiantes, Gonzalo fue un importante guía e inspiración para ellos, e incluso jugó un papel importante para que muchos de sus estudiantes decidieran estudiar carreras relacionadas con ciencias y tecnología.</p>
+                <p>Entrevistamos a Gonzalo Salinas, docente universitario, profesor de colegio y tutor de matemáticas de
+                    varios olimpistas premiados. Como cuentan sus ex-estudiantes, Gonzalo fue un importante guía e
+                    inspiración para ellos, e incluso jugó un papel importante para que muchos de sus estudiantes
+                    decidieran estudiar carreras relacionadas con ciencias y tecnología.</p>
                 <br>
-                <p>Aprender ciencias exactas requiere mucha dedicación y tiempo. Gonzalo nos contó que, para que un estudiante pueda aprender correctamente matemáticas, necesita haberse apropiado de las teorías e intentar resolver ejercicios cada vez más retadores que lo obliguen reflexionar, superarse y desarrollar las habilidades que necesita. Además, nos cuenta que una particularidad de las matemáticas es que los temas se construyen de forma ordenada sobre la base de otros temas. Así, por ejemplo, si un estudiante tiene lagunas en aritmética o álgebra; tendrá problemas para aprender logaritmos, sucesiones o cálculo.</p>
+                <p>Aprender ciencias exactas requiere mucha dedicación y tiempo. Gonzalo nos contó que, para que un
+                    estudiante pueda aprender correctamente matemáticas, necesita haberse apropiado de las teorías e
+                    intentar resolver ejercicios cada vez más retadores que lo obliguen reflexionar, superarse y
+                    desarrollar las habilidades que necesita. Además, nos cuenta que una particularidad de las
+                    matemáticas es que los temas se construyen de forma ordenada sobre la base de otros temas. Así, por
+                    ejemplo, si un estudiante tiene lagunas en aritmética o álgebra; tendrá problemas para aprender
+                    logaritmos, sucesiones o cálculo.</p>
                 <br>
-                <p>Nos cuenta que, para cultivar el pensamiento matemático, un profesor debe tener más apertura hacia sus estudiantes, fomentar las dudas, curiosidad y gusto por la materia. Pero, lamentablemente, la formación de muchos maestros normalistas no incluye nuevos enfoques pedagógicos para la enseñanza de ciencias y matemáticas y, ante la dificultad que implica enseñar a pensar, muchos profesores de colegios fiscales se limitan a pedir a sus estudiantes que apliquen fórmulas de memoria.</p> 
+                <p>Nos cuenta que, para cultivar el pensamiento matemático, un profesor debe tener más apertura hacia
+                    sus estudiantes, fomentar las dudas, curiosidad y gusto por la materia. Pero, lamentablemente, la
+                    formación de muchos maestros normalistas no incluye nuevos enfoques pedagógicos para la enseñanza de
+                    ciencias y matemáticas y, ante la dificultad que implica enseñar a pensar, muchos profesores de
+                    colegios fiscales se limitan a pedir a sus estudiantes que apliquen fórmulas de memoria.</p>
                 <br>
-                <p>Pero lamentablemente, según acuerdan varios pedagogos expertos, en Bolivia <a href="https://www.lostiempos.com/actualidad/pais/20230319/educacion-exige-innovacion-e-investigacion-profesores"> la enseñanza de ciencias y tecnología sigue trancada en "clases de dictado", en la que el estudiante no participa, ni es motivado a aprender</a>. La formación de muchos maestros normalistas no incluye nuevos enfoques pedagógicos para la enseñanza del pensamiento científico y matemático. Y a ello se suma que Bolivia es uno de los pocos países a nivel latinoamericano que no realiza ni participa de las evaluaciones a los maestros de colegio.</p>
+                <p>Pero lamentablemente, según acuerdan varios pedagogos expertos, en Bolivia <a
+                        href="https://www.lostiempos.com/actualidad/pais/20230319/educacion-exige-innovacion-e-investigacion-profesores">
+                        la enseñanza de ciencias y tecnología sigue trancada en "clases de dictado", en la que el
+                        estudiante no participa, ni es motivado a aprender</a>. La formación de muchos maestros
+                    normalistas no incluye nuevos enfoques pedagógicos para la enseñanza del pensamiento científico y
+                    matemático. Y a ello se suma que Bolivia es uno de los pocos países a nivel latinoamericano que no
+                    realiza ni participa de las evaluaciones a los maestros de colegio.</p>
                 <br>
-                <p>También entrevistamos a Inara Aranibar, ganadora de la medalla de bronce en las Olimpiadas de matemáticas el 2015, estudiante de último año de licenciatura en matemáticas de la Universidad Mayor de San Simón y ex-estudiante de Gonzalo en el colegio Alemán Santa María. Su experiencia en las Olimpiadas científicas fue una de las principales razones por las que decidió estudiar matemática pura.</p>
+                <p>También entrevistamos a Inara Aranibar, ganadora de la medalla de bronce en las Olimpiadas de
+                    matemáticas el 2015, estudiante de último año de licenciatura en matemáticas de la Universidad Mayor
+                    de San Simón y ex-estudiante de Gonzalo en el colegio Alemán Santa María. Su experiencia en las
+                    Olimpiadas científicas fue una de las principales razones por las que decidió estudiar matemática
+                    pura.</p>
                 <br>
-                <p>Nos contó que muchos olimpistas envidiaban la preparación de los estudiantes del San Agustín, porque, al recibir una formación especializada, podían resolver las pruebas de la competencia con mayor facilidad.</p>
+                <p>Nos contó que muchos olimpistas envidiaban la preparación de los estudiantes del San Agustín, porque,
+                    al recibir una formación especializada, podían resolver las pruebas de la competencia con mayor
+                    facilidad.</p>
                 <br>
-                <p>Además, nos cuenta que la clave para destacarse en las Olimpiadas Científicas es haber desarrollado mucha creatividad, dominar la teoría y haber practicado lo suficiente para poder superar las exigentes pruebas de conocimientos. Pero como nos comenta, no todos los colegios forman a sus estudiantes de la misma manera y, aunque ciertamente hay jóvenes del área rural y colegios fiscales con grandes capacidades para resolver ejercicios matemáticos complejos; debido a la formación deficiente que reciben, no tienen las mismas oportunidades de ganar que los estudiantes de colegios privados.</p>
+                <p>Además, nos cuenta que la clave para destacarse en las Olimpiadas Científicas es haber desarrollado
+                    mucha creatividad, dominar la teoría y haber practicado lo suficiente para poder superar las
+                    exigentes pruebas de conocimientos. Pero como nos comenta, no todos los colegios forman a sus
+                    estudiantes de la misma manera y, aunque ciertamente hay jóvenes del área rural y colegios fiscales
+                    con grandes capacidades para resolver ejercicios matemáticos complejos; debido a la formación
+                    deficiente que reciben, no tienen las mismas oportunidades de ganar que los estudiantes de colegios
+                    privados.</p>
                 <br>
                 <hr class="solid">
                 <br>
-                <p>El problema es que la preparación de un estudiante de un colegio privado no es igual que la de estudiante de una escuela pública. Los colegios privados tienen acceso a más recursos, mejores profesores, enfoques pedagógicos novedosos y mejores condiciones para pasar clases; mientras que los colegios fiscales, no. Los estudiantes no compiten en las mismas condiciones y la deficiente educación que ofrece el sistema público a las personas con menos recursos no es capaz de darles las oportunidades necesarias para superar las pruebas de las Olimpiadas Plurinacionales.</p>
+                <p>El problema es que la preparación de un estudiante de un colegio privado no es igual que la de
+                    estudiante de una escuela pública. Los colegios privados tienen acceso a más recursos, mejores
+                    profesores, enfoques pedagógicos novedosos y mejores condiciones para pasar clases; mientras que los
+                    colegios fiscales, no. Los estudiantes no compiten en las mismas condiciones y la deficiente
+                    educación que ofrece el sistema público a las personas con menos recursos no es capaz de darles las
+                    oportunidades necesarias para superar las pruebas de las Olimpiadas Plurinacionales.</p>
                 <br>
-                <p>Año tras año, desde la creación de las Olimpiadas, el Ministerio de Educación indica que uno de sus logros más importantes es la gran cantidad niños, niñas y jóvenes del área rural y colegios fiscales que participaron en la competencia. Pero si analizamos los medalleros nacionales, vemos reflejadas las desigualdades educativas y sociales que todavía prevalecen en Bolivia.</p>
+                <p>Año tras año, desde la creación de las Olimpiadas, el Ministerio de Educación indica que uno de sus
+                    logros más importantes es la gran cantidad niños, niñas y jóvenes del área rural y colegios fiscales
+                    que participaron en la competencia. Pero si analizamos los medalleros nacionales, vemos reflejadas
+                    las desigualdades educativas y sociales que todavía prevalecen en Bolivia.</p>
             </div>
         </section>
 
@@ -394,11 +564,14 @@
             </figure>
         </section>
 
-        <section id ="outro">
+        <section id="outro">
             <div>
-                <p>Artículo escrito por <b>Valeria Peredo</b></p>
+
+                <h1>Créditos</h1>
                 <br>
-                <h1>Agradecimientos</h1>
+
+                <b>Autoría</b>
+                <p>Valeria Peredo, Lab TecnoSocial</p>
                 <br>
                 <b>Entrevistas</b>
                 <p>Inara Aranibar, Universidad Mayor de San Simón</p>
@@ -413,16 +586,32 @@
                 <br>
                 <h1>Metodología</h1>
                 <br>
-                <p>Se recolectó la información de las revistas anuales de las Olimpiadas Científicas Plurinacionales, que se recuperaron de la página caída de la biblioteca del Ministerio de Educación y los medalleros anuales que se publican desde 2019 en la página oficial de las Olimpiadas. Las revistas pueden revisarse aquí. Los datos iniciales incluían el nombre del olimpista, la olimpiada en la que participó, la categoría, el curso o nivel, el distrito educativo, el departamento y el colegio que representaba.</p>
+                <p>Se recolectó la información de las revistas anuales de las Olimpiadas Científicas Plurinacionales,
+                    que se recuperaron de la página caída de la biblioteca del Ministerio de Educación y los medalleros
+                    anuales que se publican desde 2019 en la página oficial de las Olimpiadas. Las revistas pueden
+                    revisarse aquí. Los datos iniciales incluían el nombre del olimpista, la olimpiada en la que
+                    participó, la categoría, el curso o nivel, el distrito educativo, el departamento y el colegio que
+                    representaba.</p>
                 <br>
-                <p>Estos datos fueron cruzados con los datos sobre Unidades Educativas del Ministerio de Educación, que cuenta con información de aproximadamente 10 mil escuelas en todo el país. Mediante un join en R de las dos tablas, se obtuvo una nueva que nos brindaba datos sobre área geográfica del colegio del estudiante y su dependencia, es decir, si era privado o fiscal. Finalmente se pulieron los datos mediante una limpieza manual.</p>
+                <p>Estos datos fueron cruzados con los datos sobre Unidades Educativas del Ministerio de Educación, que
+                    cuenta con información de aproximadamente 10 mil escuelas en todo el país. Mediante un join en R de
+                    las dos tablas, se obtuvo una nueva que nos brindaba datos sobre área geográfica del colegio del
+                    estudiante y su dependencia, es decir, si era privado o fiscal. Finalmente se pulieron los datos
+                    mediante una limpieza manual.</p>
                 <br>
-                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos los datos de las Olimpiadas de 2018, pues el medallero que encontramos no proporcionaba información de variables sociales que podríamos analizar: sólamente se compartió el nombre del Olimpista, la medalla que ganó y la categoría en la que participó, por tanto, no había mucha información ni variables sociales que pudiéramos analizar en las Olimpiadas de 2018.</p>
+                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos los datos de las Olimpiadas de 2018,
+                    pues el medallero que encontramos no proporcionaba información de variables sociales que podríamos
+                    analizar: sólamente se compartió el nombre del Olimpista, la medalla que ganó y la categoría en la
+                    que participó, por tanto, no había mucha información ni variables sociales que pudiéramos analizar
+                    en las Olimpiadas de 2018.</p>
                 <br>
                 <h1>Datos</h1>
                 <br>
-                <p><a href="https://github.com/lab-tecnosocial/datos-olimpiadas-cientificas-plurinacionales">Github</a></p>
-                <p><a href="https://drive.google.com/drive/folders/1XLVqPpmPetqv6veYSuPUBGF-7FcAQ8JA?usp=share_link">Google Drive</a></p>
+                <p><a
+                        href="https://github.com/lab-tecnosocial/articulo-olimpiadas-cientificas/tree/master/datos">Github</a>
+                </p>
+                <p><a href="https://drive.google.com/drive/folders/1XLVqPpmPetqv6veYSuPUBGF-7FcAQ8JA?usp=share_link">Google
+                        Drive</a></p>
                 <br>
                 <a href="https://labtecnosocial.org/">
                     <img src="img/logo-claro.png" width="150px">
@@ -432,6 +621,10 @@
     </main>
 
     <script>
+        const indicator = document.querySelector('.indicator');
+        setTimeout(() => {
+            indicator.style.display = 'none';
+        }, 5000);
         const scroller = scrollama();
 
         function handleStepEnter(response) {

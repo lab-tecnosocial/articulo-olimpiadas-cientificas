@@ -21,7 +21,7 @@
 
         body {
             font-family: 'Spline Sans Mono', monospace;
-            font-size: 16px;
+            font-size: 17px;
             line-height: 1.5;
             color: #333;
             background-color: #FFFDFA;
@@ -34,7 +34,7 @@
             line-height: 1.2;
             margin: 0;
             padding: 0;
-            font-size: 32px;
+            font-size: 36px;
             text-align: center;
         }
 
@@ -61,6 +61,10 @@
         iframe{
             border: none;
         }
+
+        a {
+  color: #ff4e50;
+}
         /* Intro y Outro */
 
 
@@ -79,6 +83,14 @@
             padding: 2rem;
             text-align: center;
             font-size: 16px;
+            color: #FFFDFA;
+            background-color: #373636;
+        }
+
+        #Autor {
+            text-align: right;
+            font-size: 14;
+            color: #ff4e50;
         }
 
 
@@ -295,7 +307,7 @@
 
             <article class="article__center">
                 <div class="step" data-step="0">
-                    <p>El 2020, UNESCO publicó los resultados del diagnóstico la calidad de educación en Bolivia, para el cual se realizaron pruebas a cientos de estudiantes, de tercero y sexto de secundaria, evaluando su desempeño en el área de lectura, matemática y ciencias.
+                    <p>El 2020, UNESCO publicó los resultados del <a href="http://fdteulp.org/wp-content/uploads/2021/12/diagnostico-aprendizajes-1.pdf">diagnóstico la calidad de educación en Bolivia</a>, para el cual se realizaron pruebas a cientos de estudiantes, de tercero y sexto de secundaria, evaluando su desempeño en el área de lectura, matemática y ciencias.
                     </p>
                 </div>
 
@@ -342,7 +354,7 @@
                 </div>
 
                 <div class="step" data-step="8">
-                    <p>En cambio, si dividimos las inversiones realizadas en el subsistema de educación regular el 2021, entre la cantidad de estudiantes que estuvieron en colegios fiscales, tenemos que la inversión anual que realiza el Estado por estudiante es de 6364 bolivianos.
+                    <p>En cambio, si dividimos las <a href="https://seie.minedu.gob.bo/reportes/estadisticas/grupo2/gasto">inversiones realizadas en el subsistema de educación regular el 2021</a>, entre la cantidad de estudiantes que estuvieron en colegios fiscales, tenemos que la inversión anual que realiza el Estado por estudiante es de 6364 bolivianos.
                 </div>
 
                 <div class="step" data-step="9">
@@ -383,32 +395,37 @@
 
         <section id ="outro">
             <div>
+                <p>Artículo escrito por <b>Valeria Peredo</b></p>
+                <br>
                 <h1>Agradecimientos</h1>
                 <br>
                 <b>Entrevistas</b>
-                <p>Inara Aranibar, Universidad Mayor de San Simón.</p>
-                <p>Gonzalo Salinas, Universidad Mayor de San Simón.</p>
+                <p>Inara Aranibar, Universidad Mayor de San Simón</p>
+                <p>Gonzalo Salinas, Universidad Mayor de San Simón</p>
                 <br>
                 <b>Fotografías y videos</b>
                 <p>Ministerio de Educación</p>
                 <p>Internet.org</p>
                 <br>
+                <b>Edición</b>
+                <p>Alex Ojeda, Lab TecnoSocial</p>
+                <br>
                 <h1>Metodología</h1>
                 <br>
                 <p>Se recolectó la información de las revistas anuales de las Olimpiadas Científicas Plurinacionales, que se recuperaron de la página caída de la biblioteca del Ministerio de Educación y los medalleros anuales que se publican desde 2019 en la página oficial de las Olimpiadas. Las revistas pueden revisarse aquí. Los datos iniciales incluían el nombre del olimpista, la olimpiada en la que participó, la categoría, el curso o nivel, el distrito educativo, el departamento y el colegio que representaba.</p>
+                <br>
                 <p>Estos datos fueron cruzados con los datos sobre Unidades Educativas del Ministerio de Educación, que cuenta con información de aproximadamente 10 mil escuelas en todo el país. Mediante un join en R de las dos tablas, se obtuvo una nueva que nos brindaba datos sobre área geográfica del colegio del estudiante y su dependencia, es decir, si era privado o fiscal. Finalmente se pulieron los datos mediante una limpieza manual.</p>
+                <br>
                 <p>Los datos fueron visualizados en Flourish. Para ello, filtramos los datos de las Olimpiadas de 2018, pues el medallero que encontramos no proporcionaba información de variables sociales que podríamos analizar: sólamente se compartió el nombre del Olimpista, la medalla que ganó y la categoría en la que participó, por tanto, no había mucha información ni variables sociales que pudiéramos analizar en las Olimpiadas de 2018.</p>
                 <br>
                 <h1>Datos</h1>
                 <br>
-                <p>Accede a los datos y a los medalleros:</p>
-                <ul>
-                    <li><a href="">Github</a></li>
-                    <li><a href="">Ciudatos Bolivia</a></li>
-                    <li><a href="">Google Drive</a></li>
-                </ul>
+                <p><a href="https://github.com/lab-tecnosocial/datos-olimpiadas-cientificas-plurinacionales">Github</a></p>
+                <p><a href="https://drive.google.com/drive/folders/1XLVqPpmPetqv6veYSuPUBGF-7FcAQ8JA?usp=share_link">Google Drive</a></p>
                 <br>
-                <img src="img/logo-claro-lab.png">
+                <a href="https://labtecnosocial.org/">
+                    <img src="img/logo-claro.png" width="150px">
+                </a>
             </div>
         </section>
     </main>

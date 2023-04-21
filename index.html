@@ -252,7 +252,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: fadeOut 6s forwards;
+            animation: fadeOut 10s forwards;
         }
 
         .arrow-icon {
@@ -294,8 +294,8 @@
     <main>
         <section class="scrolly">
             <figure class="figure__full">
-                <video autoplay muted loop id="intro-video">
-                    <source src="video/erika-esmeralda2.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline poster="video/poster.jpg"  id="intro-video">
+                    <source src="video/erika-esmeralda3.mp4" type="video/mp4">
                 </video>
                 <div class="indicator">
                     <p>Desliza hacia abajo</p>
@@ -624,7 +624,7 @@
         const indicator = document.querySelector('.indicator');
         setTimeout(() => {
             indicator.style.display = 'none';
-        }, 5000);
+        }, 10000);
         const scroller = scrollama();
 
         function handleStepEnter(response) {

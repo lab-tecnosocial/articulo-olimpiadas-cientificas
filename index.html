@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <!-- Primary Meta Tags -->
     <title>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</title>
     <meta name="title" content="Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas">
     <meta name="description"
         content="Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Analizamos los datos de sus resultados.">
+    <meta name="theme-color" content="#1c3837">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     <meta property="og:title"
         content="Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas">
     <meta property="og:description"
@@ -29,104 +26,99 @@
         content="Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Analizamos los datos de sus resultados.">
     <meta property="twitter:image"
         content="https://labtecnosocial.org/articulo-olimpiadas-cientificas/img/thumbnail.png">
-    <style>
-        /* General */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
+    <!-- Recursos: conexiones tempranas y fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://flo.uri.sh">
+    <link rel="preload" as="image" href="video/poster.webp" type="image/webp">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600;700&family=Spline+Sans+Mono:wght@400;600;700&display=swap">
+
+    <style>
+        /* ---------- Tokens (paleta del artículo) ---------- */
+        :root {
+            --coral: #fd6265;
+            --mostaza: #eeb53f;
+            --teal: #529291;
+            --menta: #c1dec0;
+            --crema: #fffdfa;
+
+            --teal-900: #1c3837;   /* fondo profundo: reemplaza al negro */
+            --teal-700: #2f6463;   /* links sobre crema */
+            --tinta: #1f3333;      /* texto principal */
+            --tinta-suave: #4d6362;
+            --linea: rgba(31, 51, 51, .14);
+
+            --titulos: 'Roboto Condensed', 'Arial Narrow', sans-serif-condensed, sans-serif;
+            --mono: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+            --medida: 42rem;       /* ancho de lectura (~65 caracteres) */
+            --medida-ancha: 60rem;
+            --gutter: clamp(1rem, 4vw, 2rem);
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap');
+        /* ---------- Base ---------- */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
 
         body {
-            font-family: 'Spline Sans Mono', monospace;
-            font-size: 17px;
-            line-height: 1.5;
-            color: #333;
-            background-color: #373636;;
-            margin: 0;
+            font-family: var(--mono);
+            font-size: clamp(1rem, .95rem + .25vw, 1.125rem);
+            line-height: 1.8;
+            color: var(--tinta);
+            background: var(--crema);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
-        h1 {
-            font-family: 'Bebas Neue';
-            font-weight: 400;
-            line-height: 1.2;
-            margin: 0;
-            padding: 0;
-            font-size: 36px;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: 'Bebas Neue';
-            font-weight: 400;
-            line-height: 1.2;
-            margin: 0;
-            padding: 0;
-            font-size: 26px;
-            text-align: center;
-        }
-
-        h3 {
-            font-family: 'Bebas Neue';
-            font-weight: 400;
-            line-height: 1.2;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
-            text-align: center;
+        img,
+        video,
+        iframe {
+            display: block;
+            max-width: 100%;
         }
 
         iframe {
-            border: none;
+            border: 0;
+        }
+
+        b,
+        strong {
+            font-weight: 700;
         }
 
         a {
-            color: #ff4e50;
+            color: var(--teal-700);
+            text-decoration: underline;
+            text-decoration-color: var(--menta);
+            text-decoration-thickness: .35em;
+            text-underline-offset: -.15em;
+            text-decoration-skip-ink: none;
+            transition: background-color .2s, text-decoration-color .2s;
         }
 
-        /* Intro y Outro */
-
-
-
-        #intro-fig {
-            position: relative;
+        a:hover {
+            text-decoration-color: var(--mostaza);
         }
 
-        #intro-video {
-            width: 100%;
-            height: 112vh;
-            object-fit: cover;
+        a:focus-visible {
+            outline: 3px solid var(--mostaza);
+            outline-offset: 2px;
+            border-radius: 2px;
         }
 
-        #outro {
-            padding: 2rem;
-            text-align: center;
-            font-size: 16px;
-            color: #FFFDFA;
-            background-color: #373636;
-        }
-        
-        #texto {
-            padding: 2rem;
-            text-align: left;
-            font-size: 16px;
-            color: #FFFDFA;
-            background-color: #373636;
-        }
-
-        #Autor {
-            text-align: right;
-            font-size: 14;
-            color: #ff4e50;
-        }
-
-
-        /* Scrollama style */
-
+        /* ---------- Scrollama (sin cambios de comportamiento) ---------- */
         .scrolly {
             position: relative;
             padding: 0.1px;
@@ -138,105 +130,374 @@
             top: 0;
             left: 0;
             height: 100vh;
-            width: 100vw;
+            width: 100%;
             z-index: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            background: var(--crema);
         }
 
-        .figure__semifull {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            left: 20%;
-            height: 100vh;
-            width: 80vw;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .article__center {
-            position: relative;
-            padding: 0;
-            max-width: 30rem;
-            margin: 0 auto;
-        }
-
-        .article__left {
-            position: relative;
-            padding: 0;
-            max-width: 30rem;
-            margin: 0 auto;
-            right: 30%;
-        }
-
-        .step {
-            margin: 40rem auto;
-            background: #f1faf1;
-            padding: 1.25em;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
-            color: black;
-        }
-
-        /* Lista */
-        .row {
-            display: flex;
-        }
-
-        .column {
-            flex: 50%;
-            font-size: 12px;
-        }
-
-        /* Images */
         .image__full {
             height: 100%;
             width: 100%;
             object-fit: cover;
             max-height: 100vh;
-            max-width: 100vw;
         }
 
-        .image__center {
-            height: 100%;
+        #intro-video {
             width: 100%;
-            object-fit: contain;
-            max-height: 100vh;
-            max-width: 100vw;
-            padding: 1rem;
+            height: 112vh;
+            object-fit: cover;
         }
 
-        /* Media queries */
+        .article__center {
+            position: relative;
+            max-width: 30rem;
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
 
+        .step {
+            position: relative;
+            margin: 40rem auto;
+            padding: 1.25rem 1.5rem;
+            background: var(--crema);
+            color: var(--tinta);
+            text-align: center;
+            font-size: .95em;
+            line-height: 1.7;
+            border-radius: 6px;
+            border-top: 4px solid var(--teal);
+            box-shadow: 0 10px 30px -10px rgba(28, 56, 55, .35), 0 0 0 1px var(--linea);
+        }
 
+        /* Indicador "Desliza hacia abajo" */
+        .indicator {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1.25rem 1.75rem;
+            border-radius: 999px;
+            background: rgba(28, 56, 55, .72);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            color: var(--crema);
+            font-size: .85rem;
+            letter-spacing: .04em;
+            line-height: 1.4;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .25rem;
+            animation: fadeOut 10s forwards;
+        }
+
+        .arrow-icon {
+            width: 22px;
+            height: 22px;
+            margin-top: .25rem;
+            color: var(--mostaza);
+            animation: arrowAnim 1s infinite;
+        }
+
+        @keyframes arrowAnim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* ---------- Secciones de texto ---------- */
+        .texto {
+            position: relative;
+            z-index: 1;
+            background: var(--crema);
+            padding: clamp(4rem, 10vw, 8rem) var(--gutter);
+        }
+
+        .texto > * {
+            max-width: var(--medida);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .texto p + p {
+            margin-top: 1.5em;
+        }
+
+        .texto h1,
+        .texto h2 {
+            font-family: var(--titulos);
+            color: var(--teal-900);
+            letter-spacing: -.01em;
+        }
+
+        /* Cabecera del artículo */
+        .cabecera {
+            margin-bottom: clamp(2.5rem, 6vw, 4rem);
+        }
+
+        .cabecera h1 {
+            font-size: clamp(2.2rem, 1.5rem + 2.8vw, 3.75rem);
+            font-weight: 700;
+            line-height: 1.02;
+            text-wrap: balance;
+        }
+
+        .franja {
+            display: flex;
+            height: 6px;
+            width: 9rem;
+            margin: 1.75rem 0 1.25rem;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .franja span { flex: 1; }
+        .franja span:nth-child(1) { background: var(--coral); }
+        .franja span:nth-child(2) { background: var(--mostaza); }
+        .franja span:nth-child(3) { background: var(--teal); }
+        .franja span:nth-child(4) { background: var(--menta); }
+
+        .byline {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: .85rem 0;
+            border-top: 1px solid var(--linea);
+            border-bottom: 1px solid var(--linea);
+            font-size: .85rem;
+            letter-spacing: .02em;
+            color: var(--tinta-suave);
+        }
+
+        .byline b {
+            color: var(--tinta);
+        }
+
+        .byline time {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Título de sección */
+        .texto h2 {
+            font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+            font-weight: 600;
+            line-height: 1.1;
+            text-wrap: balance;
+            margin-bottom: 2rem;
+        }
+
+        .texto h2::after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 4px;
+            margin-top: 1.25rem;
+            background: var(--coral);
+            border-radius: 2px;
+        }
+
+        /* Gráfico embebido: más ancho que el texto */
+        .grafico {
+            max-width: var(--medida-ancha) !important;
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+        }
+
+        /* Separador */
+        .texto hr {
+            border: 0;
+            height: 8px;
+            margin: 3.5rem auto;
+            background:
+                radial-gradient(circle, var(--coral) 3.5px, transparent 4px) 0 50% / 8px 8px no-repeat,
+                radial-gradient(circle, var(--mostaza) 3.5px, transparent 4px) 50% 50% / 8px 8px no-repeat,
+                radial-gradient(circle, var(--teal) 3.5px, transparent 4px) 100% 50% / 8px 8px no-repeat;
+            width: 56px;
+        }
+
+        /* ---------- Outro ---------- */
+        .outro-foto {
+            position: relative;
+            height: min(100vh, 62vw);
+            min-height: 22rem;
+            overflow: hidden;
+            background: var(--teal-900);
+        }
+
+        .outro-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .outro-foto::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(28, 56, 55, 0) 55%, var(--teal-900) 100%),
+                linear-gradient(rgba(82, 146, 145, .18), rgba(82, 146, 145, .18));
+            mix-blend-mode: normal;
+            pointer-events: none;
+        }
+
+        .outro {
+            background: var(--teal-900);
+            color: rgba(255, 253, 250, .86);
+            font-size: .95rem;
+            line-height: 1.75;
+            padding: clamp(3rem, 8vw, 6rem) var(--gutter) 0;
+        }
+
+        .outro__grid {
+            max-width: 68rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: clamp(3rem, 6vw, 4.5rem);
+        }
+
+        @media (min-width: 860px) {
+            .outro__grid {
+                grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+                column-gap: clamp(3rem, 7vw, 6rem);
+            }
+
+            .outro__creditos {
+                grid-row: span 2;
+            }
+        }
+
+        .outro h2 {
+            font-family: var(--titulos);
+            font-weight: 600;
+            font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem);
+            line-height: 1.1;
+            letter-spacing: 0;
+            color: var(--crema);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(193, 222, 192, .25);
+        }
+
+        .outro p + p {
+            margin-top: 1.25em;
+        }
+
+        .creditos {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .creditos dt {
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--mostaza);
+            margin-bottom: .25rem;
+        }
+
+        .creditos dd {
+            color: var(--crema);
+            line-height: 1.6;
+        }
+
+        .outro a {
+            color: var(--menta);
+            text-decoration-color: rgba(193, 222, 192, .4);
+            text-decoration-thickness: 1px;
+            text-underline-offset: .2em;
+        }
+
+        .outro a:hover {
+            color: var(--crema);
+            text-decoration-color: var(--mostaza);
+        }
+
+        .descargas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            margin-top: 1.5rem;
+        }
+
+        .outro .boton {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .6rem 1.1rem;
+            border: 1.5px solid var(--menta);
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .85rem;
+            text-decoration: none;
+            color: var(--menta);
+            transition: background-color .2s, color .2s;
+        }
+
+        .outro .boton:hover {
+            background: var(--menta);
+            color: var(--teal-900);
+        }
+
+        .outro .boton svg {
+            width: 1em;
+            height: 1em;
+        }
+
+        .outro__pie {
+            max-width: 68rem;
+            margin: clamp(4rem, 9vw, 6rem) auto 0;
+            padding: 2.5rem 0 3rem;
+            border-top: 1px solid rgba(193, 222, 192, .25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: clamp(1.5rem, 5vw, 3.5rem);
+        }
+
+        .outro__pie a {
+            display: block;
+            text-decoration: none;
+            transition: opacity .2s;
+        }
+
+        .outro__pie a:hover {
+            opacity: .85;
+        }
+
+        .outro__pie img {
+            width: 170px;
+            height: auto;
+        }
+
+        .outro__pie .placa {
+            background: var(--crema);
+            border-radius: 14px;
+            padding: .6rem 1rem;
+        }
+
+        .outro__pie .placa img {
+            width: 140px;
+        }
+
+        /* ---------- Móvil ---------- */
         @media screen and (max-width: 480px) {
-            .figure__full {
-                height: 100vh;
-                width: 100vw;
-            }
-
-            .figure__semifull {
-                height: 100vh;
-                width: 100vw;
-            }
-
             .article__center {
-                max-width: 20rem;
-                margin: 0 auto;
-                font-size: 14px;
-            }
-
-            .article__left {
-                max-width: 20rem;
-                margin: 0 auto;
-                right: 0;
                 font-size: 14px;
             }
 
@@ -245,81 +506,27 @@
             }
         }
 
-        @media screen and (min-width: 1080px){
-            #outro {
-                margin: 0 20rem;
-            }
-            #texto {
-                margin: 0 20rem;
-            }
-        }
-
-        /* Indicador */
-
-        .indicator {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 30px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            animation: fadeOut 10s forwards;
-        }
-
-        .arrow-icon {
-            width: 20px;
-            height: 20px;
-            transform: rotate(45deg);
-            margin-left: 10px;
-            animation: arrowAnim 1s infinite;
-        }
-
-        @keyframes arrowAnim {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            .arrow-icon { animation: none; }
+            * { transition: none !important; }
         }
     </style>
-    <script src="https://unpkg.com/scrollama"></script>
 </head>
 
 <body>
     <main>
         <section class="scrolly">
             <figure class="figure__full">
-                <video autoplay muted loop playsinline poster="video/poster.jpg"  id="intro-video">
+                <video autoplay muted loop playsinline preload="auto" poster="video/poster.webp" id="intro-video">
                     <source src="video/erika-esmeralda3.mp4" type="video/mp4">
                 </video>
-                <div class="indicator">
+                <div class="indicator" aria-hidden="true">
                     <p>Desliza</p>
                     <p>hacia abajo</p>
-                    <span class="arrow-icon material-symbols-outlined">
-                        keyboard_double_arrow_down
-                        </span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 5l6 6 6-6M6 13l6 6 6-6" />
+                    </svg>
                 </div>
             </figure>
 
@@ -342,7 +549,8 @@
 
         <section class="scrolly" data-flourishid="1867763">
             <figure class="figure__full">
-                <iframe class="image__full" scrolling="no"
+                <iframe class="image__full" scrolling="no" loading="lazy"
+                    title="Medalleros de las Olimpiadas Científicas Plurinacionales 2012–2021"
                     src="https://flo.uri.sh/story/1867763/embed#slide-0"></iframe>
             </figure>
 
@@ -390,44 +598,45 @@
             </article>
         </section>
 
-        <section id="texto">
-            <div>
+        <section class="texto">
+            <header class="cabecera">
                 <h1>Las desigualdades educativas que ocultan los medalleros de las Olimpiadas Científicas</h1>
-                <p style="text-align: right">Por: <b>Valeria Peredo</b></p>
-                <br>
-                <br>
-                <p>Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre
-                    ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Fueron
-                    creadas el 2011 por el gobierno del ex-presidente Evo Morales, en alianza con los departamentos de
-                    ciencias y tecnología de distintas universidades bolivianas.</p>
-                <br>
-                <p>Con el objetivo fomentar el desarrollo de conocimientos en ciencias y tecnología, e identificar
-                    jóvenes talentos científicos en Bolivia, la competencia se organiza en cuatro etapas que se realizan
-                    a lo largo de un año escolar.</p>
-                <br>
-                <div class="flourish-embed" data-src="visualisation/13324432">
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <div class="franja" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                <div class="byline">
+                    <p>Por: <b>Valeria Peredo</b></p>
+                    <time datetime="2023-04-21">21/04/2023</time>
                 </div>
-                <br>
-                <p>Durante la primera etapa, sucede la inscripción. El profesor elige a sus estudiantes destacados en
-                    clase y los invita a inscribirse a las Olimpiadas Científicas. Pueden competir en el área de
-                    Astronomía y astrofísica, Biología, Feria científica, Física, Geografía, Informática, Matemáticas,
-                    Química o Robótica.</p>
-                <br>
-                <p>Tras la inscripción, los estudiantes deben superar tres fases de evaluación de conocimientos a nivel
-                    distrital, departamental y, finalmente, nacional. Los temas evaluados en las distintas fases son
-                    planificadas por un comité académico de alto nivel, compuesto por docentes de varias universidades
-                    bolivianas.</p>
-                <br>
-                <p>Desde la fase distrital, a medida que avanza la competencia, las pruebas se vuelven más y más
-                    complejas. Es aquí donde miles de estudiantes de colegios fiscales y del área rural son
-                    descalificados, porque la preparación que recibieron para las olimpiadas es insuficiente.</p>
+            </header>
+
+            <p>Las Olimpiadas Científicas Plurinacionales son una competencia nacional de conocimientos sobre
+                ciencia y tecnología, en la que participan estudiantes de primero a sexto de secundaria. Fueron
+                creadas el 2011 por el gobierno del ex-presidente Evo Morales, en alianza con los departamentos de
+                ciencias y tecnología de distintas universidades bolivianas.</p>
+            <p>Con el objetivo fomentar el desarrollo de conocimientos en ciencias y tecnología, e identificar
+                jóvenes talentos científicos en Bolivia, la competencia se organiza en cuatro etapas que se realizan
+                a lo largo de un año escolar.</p>
+
+            <div class="grafico flourish-embed" data-src="visualisation/13324432">
+                <script src="https://public.flourish.studio/resources/embed.js" async></script>
             </div>
+
+            <p>Durante la primera etapa, sucede la inscripción. El profesor elige a sus estudiantes destacados en
+                clase y los invita a inscribirse a las Olimpiadas Científicas. Pueden competir en el área de
+                Astronomía y astrofísica, Biología, Feria científica, Física, Geografía, Informática, Matemáticas,
+                Química o Robótica.</p>
+            <p>Tras la inscripción, los estudiantes deben superar tres fases de evaluación de conocimientos a nivel
+                distrital, departamental y, finalmente, nacional. Los temas evaluados en las distintas fases son
+                planificadas por un comité académico de alto nivel, compuesto por docentes de varias universidades
+                bolivianas.</p>
+            <p>Desde la fase distrital, a medida que avanza la competencia, las pruebas se vuelven más y más
+                complejas. Es aquí donde miles de estudiantes de colegios fiscales y del área rural son
+                descalificados, porque la preparación que recibieron para las olimpiadas es insuficiente.</p>
         </section>
 
         <section class="scrolly" data-flourishid="1891701">
             <figure class="figure__full">
-                <iframe class="image__full" scrolling="no"
+                <iframe class="image__full" scrolling="no" loading="lazy"
+                    title="Desempeño escolar y medallas por colegio"
                     src="https://flo.uri.sh/story/1891701/embed#slide-0"></iframe>
             </figure>
 
@@ -473,19 +682,19 @@
                 </div>
 
                 <div class="step" data-step="5">
-                    <p>Solamente tres de ellos son fiscales.
+                    <p>Solamente tres de ellos son fiscales.</p>
                 </div>
 
                 <div class="step" data-step="6">
                     <p>Una clave para entender por qué tan pocos colegios se llevan la mayor cantidad de premios en las
                         Olimpiadas Plurinacionales, está en la inversión que se realiza por estudiante, que no es la
-                        misma en colegios públicos que en privados.
+                        misma en colegios públicos que en privados.</p>
                 </div>
 
                 <div class="step" data-step="7">
                     <p>Por ejemplo, la pensión del colegio San Agustín para un estudiante de secundaria es de 990bs
                         mensuales. Eso quiere decir que la inversión anual por cada estudiante es de, aproximadamente,
-                        9900 bs.
+                        9900 bs.</p>
                 </div>
 
                 <div class="step" data-step="8">
@@ -493,7 +702,7 @@
                             href="https://seie.minedu.gob.bo/reportes/estadisticas/grupo2/gasto">inversiones realizadas
                             en el subsistema de educación regular el 2021</a>, entre la cantidad de estudiantes que
                         estuvieron en colegios fiscales, tenemos que la inversión anual que realiza el Estado por
-                        estudiante es de 6364 bolivianos.
+                        estudiante es de 6364 bolivianos.</p>
                 </div>
 
                 <div class="step" data-step="9">
@@ -501,182 +710,193 @@
                         caracteriza al Estado boliviano, le da una ventaja a los estudiantes de colegios privados.
                         Colegios como el San Agustín, al disponer de más recursos, pueden contratar profesores con mejor
                         preparación académica y pagarles sus correspondientes horas extra para preparar a sus
-                        olimpistas.
+                        olimpistas.</p>
                 </div>
 
                 <div class="step" data-step="10">
                     <p>En cambio, es bastante común ver a padres de familia y profesores del sistema de educación fiscal
-                        protestando por la falta de recursos y condiciones mínimas para pasar clases.
+                        protestando por la falta de recursos y condiciones mínimas para pasar clases.</p>
                 </div>
+            </article>
         </section>
 
-        <section id="texto">
-            <div>
-                <h1>El reto de aprender (y enseñar) ciencias exactas</h1>
-                <br>
-                <p>Entrevistamos a Gonzalo Salinas, docente universitario, profesor de colegio y tutor de matemáticas de
-                    varios olimpistas premiados. Como cuentan sus ex-estudiantes, Gonzalo fue un importante guía e
-                    inspiración para ellos, e incluso jugó un papel importante para que muchos de sus estudiantes
-                    decidieran estudiar carreras relacionadas con ciencias y tecnología.</p>
-                <br>
-                <p>Aprender ciencias exactas requiere mucha dedicación y tiempo. Gonzalo nos contó que, para que un
-                    estudiante pueda aprender correctamente matemáticas, necesita haberse apropiado de las teorías e
-                    intentar resolver ejercicios cada vez más retadores que lo obliguen reflexionar, superarse y
-                    desarrollar las habilidades que necesita. Además, nos cuenta que una particularidad de las
-                    matemáticas es que los temas se construyen de forma ordenada sobre la base de otros temas. Así, por
-                    ejemplo, si un estudiante tiene lagunas en aritmética o álgebra; tendrá problemas para aprender
-                    logaritmos, sucesiones o cálculo.</p>
-                <br>
-                <p>Nos cuenta que, para cultivar el pensamiento matemático, un profesor debe tener más apertura hacia
-                    sus estudiantes, fomentar las dudas, curiosidad y gusto por la materia. Pero, lamentablemente, la
-                    formación de muchos maestros normalistas no incluye nuevos enfoques pedagógicos para la enseñanza de
-                    ciencias y matemáticas y, ante la dificultad que implica enseñar a pensar, muchos profesores de
-                    colegios fiscales se limitan a pedir a sus estudiantes que apliquen fórmulas de memoria.</p>
-                <br>
-                <p>Pero lamentablemente, según acuerdan varios pedagogos expertos, en Bolivia <a
-                        href="https://www.lostiempos.com/actualidad/pais/20230319/educacion-exige-innovacion-e-investigacion-profesores">
-                        la enseñanza de ciencias y tecnología sigue trancada en "clases de dictado", en la que el
-                        estudiante no participa, ni es motivado a aprender</a>. La formación de muchos maestros
-                    normalistas no incluye nuevos enfoques pedagógicos para la enseñanza del pensamiento científico y
-                    matemático. Y a ello se suma que Bolivia es uno de los pocos países a nivel latinoamericano que no
-                    realiza ni participa de las evaluaciones a los maestros de colegio.</p>
-                <br>
-                <p>También entrevistamos a Inara Aranibar, ganadora de la medalla de bronce en las Olimpiadas de
-                    matemáticas el 2015, estudiante de último año de licenciatura en matemáticas de la Universidad Mayor
-                    de San Simón y ex-estudiante de Gonzalo en el colegio Alemán Santa María. Su experiencia en las
-                    Olimpiadas científicas fue una de las principales razones por las que decidió estudiar matemática
-                    pura.</p>
-                <br>
-                <p>Nos contó que muchos olimpistas envidiaban la preparación de los estudiantes del San Agustín, porque,
-                    al recibir una formación especializada, podían resolver las pruebas de la competencia con mayor
-                    facilidad.</p>
-                <br>
-                <p>Además, nos cuenta que la clave para destacarse en las Olimpiadas Científicas es haber desarrollado
-                    mucha creatividad, dominar la teoría y haber practicado lo suficiente para poder superar las
-                    exigentes pruebas de conocimientos. Pero como nos comenta, no todos los colegios forman a sus
-                    estudiantes de la misma manera y, aunque ciertamente hay jóvenes del área rural y colegios fiscales
-                    con grandes capacidades para resolver ejercicios matemáticos complejos; debido a la formación
-                    deficiente que reciben, no tienen las mismas oportunidades de ganar que los estudiantes de colegios
-                    privados.</p>
-                <br>
-                <hr class="solid">
-                <br>
-                <p>El problema es que la preparación de un estudiante de un colegio privado no es igual que la de
-                    estudiante de una escuela pública. Los colegios privados tienen acceso a más recursos, mejores
-                    profesores, enfoques pedagógicos novedosos y mejores condiciones para pasar clases; mientras que los
-                    colegios fiscales, no. Los estudiantes no compiten en las mismas condiciones y la deficiente
-                    educación que ofrece el sistema público a las personas con menos recursos no es capaz de darles las
-                    oportunidades necesarias para superar las pruebas de las Olimpiadas Plurinacionales.</p>
-                <br>
-                <p>Año tras año, desde la creación de las Olimpiadas, el Ministerio de Educación indica que uno de sus
-                    logros más importantes es la gran cantidad niños, niñas y jóvenes del área rural y colegios fiscales
-                    que participaron en la competencia. Pero si analizamos los medalleros nacionales, vemos reflejadas
-                    las desigualdades educativas y sociales que todavía prevalecen en Bolivia.</p>
-            </div>
+        <section class="texto">
+            <h2>El reto de aprender (y enseñar) ciencias exactas</h2>
+            <p>Entrevistamos a Gonzalo Salinas, docente universitario, profesor de colegio y tutor de matemáticas de
+                varios olimpistas premiados. Como cuentan sus ex-estudiantes, Gonzalo fue un importante guía e
+                inspiración para ellos, e incluso jugó un papel importante para que muchos de sus estudiantes
+                decidieran estudiar carreras relacionadas con ciencias y tecnología.</p>
+            <p>Aprender ciencias exactas requiere mucha dedicación y tiempo. Gonzalo nos contó que, para que un
+                estudiante pueda aprender correctamente matemáticas, necesita haberse apropiado de las teorías e
+                intentar resolver ejercicios cada vez más retadores que lo obliguen reflexionar, superarse y
+                desarrollar las habilidades que necesita. Además, nos cuenta que una particularidad de las
+                matemáticas es que los temas se construyen de forma ordenada sobre la base de otros temas. Así, por
+                ejemplo, si un estudiante tiene lagunas en aritmética o álgebra; tendrá problemas para aprender
+                logaritmos, sucesiones o cálculo.</p>
+            <p>Nos cuenta que, para cultivar el pensamiento matemático, un profesor debe tener más apertura hacia
+                sus estudiantes, fomentar las dudas, curiosidad y gusto por la materia. Pero, lamentablemente, la
+                formación de muchos maestros normalistas no incluye nuevos enfoques pedagógicos para la enseñanza de
+                ciencias y matemáticas y, ante la dificultad que implica enseñar a pensar, muchos profesores de
+                colegios fiscales se limitan a pedir a sus estudiantes que apliquen fórmulas de memoria.</p>
+            <p>Pero lamentablemente, según acuerdan varios pedagogos expertos, en Bolivia <a
+                    href="https://www.lostiempos.com/actualidad/pais/20230319/educacion-exige-innovacion-e-investigacion-profesores">la
+                    enseñanza de ciencias y tecnología sigue trancada en "clases de dictado", en la que el
+                    estudiante no participa, ni es motivado a aprender</a>. La formación de muchos maestros
+                normalistas no incluye nuevos enfoques pedagógicos para la enseñanza del pensamiento científico y
+                matemático. Y a ello se suma que Bolivia es uno de los pocos países a nivel latinoamericano que no
+                realiza ni participa de las evaluaciones a los maestros de colegio.</p>
+            <p>También entrevistamos a Inara Aranibar, ganadora de la medalla de bronce en las Olimpiadas de
+                matemáticas el 2015, estudiante de último año de licenciatura en matemáticas de la Universidad Mayor
+                de San Simón y ex-estudiante de Gonzalo en el colegio Alemán Santa María. Su experiencia en las
+                Olimpiadas científicas fue una de las principales razones por las que decidió estudiar matemática
+                pura.</p>
+            <p>Nos contó que muchos olimpistas envidiaban la preparación de los estudiantes del San Agustín, porque,
+                al recibir una formación especializada, podían resolver las pruebas de la competencia con mayor
+                facilidad.</p>
+            <p>Además, nos cuenta que la clave para destacarse en las Olimpiadas Científicas es haber desarrollado
+                mucha creatividad, dominar la teoría y haber practicado lo suficiente para poder superar las
+                exigentes pruebas de conocimientos. Pero como nos comenta, no todos los colegios forman a sus
+                estudiantes de la misma manera y, aunque ciertamente hay jóvenes del área rural y colegios fiscales
+                con grandes capacidades para resolver ejercicios matemáticos complejos; debido a la formación
+                deficiente que reciben, no tienen las mismas oportunidades de ganar que los estudiantes de colegios
+                privados.</p>
+
+            <hr>
+
+            <p>El problema es que la preparación de un estudiante de un colegio privado no es igual que la de
+                estudiante de una escuela pública. Los colegios privados tienen acceso a más recursos, mejores
+                profesores, enfoques pedagógicos novedosos y mejores condiciones para pasar clases; mientras que los
+                colegios fiscales, no. Los estudiantes no compiten en las mismas condiciones y la deficiente
+                educación que ofrece el sistema público a las personas con menos recursos no es capaz de darles las
+                oportunidades necesarias para superar las pruebas de las Olimpiadas Plurinacionales.</p>
+            <p>Año tras año, desde la creación de las Olimpiadas, el Ministerio de Educación indica que uno de sus
+                logros más importantes es la gran cantidad niños, niñas y jóvenes del área rural y colegios fiscales
+                que participaron en la competencia. Pero si analizamos los medalleros nacionales, vemos reflejadas
+                las desigualdades educativas y sociales que todavía prevalecen en Bolivia.</p>
         </section>
 
-        <section class="scrolly">
-            <figure class="figure__full">
-                <div class="overlay-2"></div>
-                <img src="img/outro.png" class="image__full">
-            </figure>
-        </section>
+        <figure class="outro-foto">
+            <picture>
+                <source type="image/webp" srcset="img/outro-960.webp 960w, img/outro.webp 1920w" sizes="100vw">
+                <img src="img/outro.jpg" alt="Tres olimpistas muestran sus medallas" width="1920" height="1277"
+                    loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </main>
 
-        <section id="outro">
-            <div>
+    <footer class="outro">
+        <div class="outro__grid">
+            <section class="outro__creditos">
+                <h2>Créditos</h2>
+                <dl class="creditos">
+                    <div>
+                        <dt>Autoría</dt>
+                        <dd>Valeria Peredo, Lab TecnoSocial</dd>
+                    </div>
+                    <div>
+                        <dt>Entrevistas</dt>
+                        <dd>Inara Aranibar, Universidad Mayor de San Simón</dd>
+                        <dd>Gonzalo Salinas, Universidad Mayor de San Simón</dd>
+                    </div>
+                    <div>
+                        <dt>Fotografías y videos</dt>
+                        <dd>Ministerio de Educación</dd>
+                        <dd>Internet.org</dd>
+                    </div>
+                    <div>
+                        <dt>Edición</dt>
+                        <dd>Alex Ojeda, Lab TecnoSocial</dd>
+                    </div>
+                </dl>
+            </section>
 
-                <h1>Créditos</h1>
-                <br>
-
-                <b>Autoría</b>
-                <p>Valeria Peredo, Lab TecnoSocial</p>
-                <br>
-                <b>Entrevistas</b>
-                <p>Inara Aranibar, Universidad Mayor de San Simón</p>
-                <p>Gonzalo Salinas, Universidad Mayor de San Simón</p>
-                <br>
-                <b>Fotografías y videos</b>
-                <p>Ministerio de Educación</p>
-                <p>Internet.org</p>
-                <br>
-                <b>Edición</b>
-                <p>Alex Ojeda, Lab TecnoSocial</p>
-                <br>
-                <h1>Metodología</h1>
-                <br>
-                <p>Recolectamos los datos de las revistas anuales de las Olimpiadas Científicas Plurinacionales y de los medalleros nacionales que se publican en el <a href="https://olimpiada.minedu.gob.bo/">sitio oficial de las Olimpiadas Científicas</a>.
-                    La base de datos inicial incluía el nombre del olimpista o su código RUDE (Registro únio de estudiante), la olimpiada en la que
+            <section>
+                <h2>Metodología</h2>
+                <p>Recolectamos los datos de las revistas anuales de las Olimpiadas Científicas Plurinacionales y de los
+                    medalleros nacionales que se publican en el <a href="https://olimpiada.minedu.gob.bo/">sitio oficial
+                        de las Olimpiadas Científicas</a>.
+                    La base de datos inicial incluía el nombre del olimpista o su código RUDE (Registro únio de
+                    estudiante), la olimpiada en la que
                     participó, la categoría, su curso o nivel, distrito educativo, el departamento y el colegio que
                     representaba.</p>
-                <br>
                 <p>Cruzamos el dataset inicial con datos sobre Unidades Educativas del Ministerio de Educación, que
                     cuenta con información de aproximadamente 10 mil escuelas en todo el país. Mediante un join en R de
                     las dos tablas, se obtuvo una nueva que nos brindaba datos sobre área geográfica del colegio del
                     estudiante y la dependencia del colegio. Finalmente se pulieron los datos
                     mediante una limpieza manual.</p>
-                <br>
-                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos la información de las Olimpiadas de 2018,
-                    pues el medallero de dicho año solamente nos mostraba el nombre del olimpista, la categoría en que ganó y su departamento, lo cual no nos permitía hacer cruces con otras variables sociales.</p>
-                <br>
-                <h1>Datos</h1>
-                <br>
-                <p>La base de datos, y las revistas y medalleros que utilizamos para construirla pueden descargase en los siguientes links:</p>
-                <br>
-                <p><a
-                        href="https://github.com/lab-tecnosocial/articulo-olimpiadas-cientificas/tree/master/datos">Github</a>
-                </p>
-                <p><a href="https://drive.google.com/drive/folders/1XLVqPpmPetqv6veYSuPUBGF-7FcAQ8JA?usp=share_link">Google
-                        Drive</a></p>
-                <br>
-                <a href="https://labtecnosocial.org/">
-                    <img src="img/logo-claro.png" width="150px">
-                </a>
-            </div>
-        </section>
-    </main>
+                <p>Los datos fueron visualizados en Flourish. Para ello, filtramos la información de las Olimpiadas de
+                    2018,
+                    pues el medallero de dicho año solamente nos mostraba el nombre del olimpista, la categoría en que
+                    ganó y su departamento, lo cual no nos permitía hacer cruces con otras variables sociales.</p>
+            </section>
 
+            <section>
+                <h2>Datos</h2>
+                <p>La base de datos, y las revistas y medalleros que utilizamos para construirla pueden descargase en
+                    los siguientes links:</p>
+                <div class="descargas">
+                    <a class="boton"
+                        href="https://github.com/lab-tecnosocial/articulo-olimpiadas-cientificas/tree/master/datos">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" />
+                        </svg>Github</a>
+                    <a class="boton"
+                        href="https://drive.google.com/drive/folders/1XLVqPpmPetqv6veYSuPUBGF-7FcAQ8JA?usp=share_link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" />
+                        </svg>Google Drive</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="outro__pie">
+            <a href="https://labtecnosocial.org/" aria-label="Lab TecnoSocial">
+                <picture>
+                    <source type="image/webp" srcset="img/logo-claro.webp">
+                    <img src="img/logo-claro.png" alt="Lab TecnoSocial" width="576" height="287" loading="lazy"
+                        decoding="async">
+                </picture>
+            </a>
+            <a class="placa" href="https://conchuwis.com/" aria-label="Con Chuwis">
+                <img src="img/logo-conchuwis.webp" alt="Con Chuwis" width="591" height="299" loading="lazy"
+                    decoding="async">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/scrollama@3.2.0/build/scrollama.min.js"></script>
     <script>
         const indicator = document.querySelector('.indicator');
         setTimeout(() => {
             indicator.style.display = 'none';
         }, 10000);
+
         const scroller = scrollama();
 
-        function handleStepEnter(response) {
-            const { element, index, direction } = response;
-            element.classList.add("is-active");
+        function handleStepEnter({ element }) {
+            element.classList.add('is-active');
 
             if (element.dataset.step) {
-                const id = element.parentElement.parentElement.dataset.flourishid;
-                const link = `https://flo.uri.sh/story/${id}/embed#slide-`;
-                const slide = element.dataset.step;
-                document.querySelector(`section[data-flourishid="${id}"] iframe`)
-                    .setAttribute('src', link + slide);
+                const section = element.closest('section[data-flourishid]');
+                const id = section.dataset.flourishid;
+                const iframe = section.querySelector('iframe');
+                const src = `https://flo.uri.sh/story/${id}/embed#slide-${element.dataset.step}`;
+                if (iframe.getAttribute('src') !== src) iframe.setAttribute('src', src);
             }
         }
 
-        function handleStepExit(response) {
-            const { element, index, direction } = response;
-            element.classList.remove("is-active");
+        function handleStepExit({ element }) {
+            element.classList.remove('is-active');
         }
 
+        scroller
+            .setup({ step: '.step', offset: 0.5, debug: false })
+            .onStepEnter(handleStepEnter)
+            .onStepExit(handleStepExit);
 
-        function init() {
-            scroller
-                .setup({
-                    step: ".step",
-                    offset: 0.5,
-                    debug: false,
-
-                })
-                .onStepEnter(handleStepEnter)
-                .onStepExit(handleStepExit);
-
-
-            window.addEventListener("resize", scroller.resize);
-        }
-
-        init();
+        window.addEventListener('resize', scroller.resize);
     </script>
 </body>
 
